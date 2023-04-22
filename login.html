@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+	<style>
+		body{
+			background-color:#731212; 
+		}
+		#login-box{
+			background-color:#911111; 
+			width:380px;
+			height:260px;
+			margin:140px auto 0px;
+			border-radius:5px;
+		}
+		#login-box-interno{
+			width:360px;
+			height:240px;
+			background-color:#ffffff;
+			position:absolute;
+			margin:10px;
+			border-radius:5px;
+			box-shadow:0px 0px 5px black;
+			overflow:hidden;
+		}
+		#login-box-label{
+			height:45px;
+			text-align:center;
+			font:bold 14px/45px sans-serif;
+			border-top:5px;
+			border-top-right-radius:5px;
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+12,8f0222+13,8f0222+13 */
+background: #a90329; /* Old browsers */
+background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 12%, #8f0222 13%, #8f0222 13%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 12%,#8f0222 13%,#8f0222 13%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #a90329 0%,#8f0222 12%,#8f0222 13%,#8f0222 13%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#8f0222',GradientType=0 ); /* IE6-9 */
+			border-bottom:1px solid white;
+			box-shadow:1px 0px 1px black;
+			color:#000000;
+			text-shadow:1px 0px 1px white;
+		}
+		.input-div{
+			margin:20px;
+			padding:5px;
+			background-color:#fccfcf;
+			border-radius:3px;
+		}
+		.input-div input{
+			width:310px;
+			height:35px;
+			padding-left:5px;
+			font:13px sans-serif;
+			color:#aeaeae;
+			border-radius:3px;
+			border:1px solid #fccfcf;
+			outline:none;
+		}
+		.input-div:hover{
+			background-color:#fccfcf;
+		}
+		.input-div:hover input{
+			border-color:#cccccc;
+		}
+		#input-senha{
+			margin-top:-10px;
+		}
+		#botoe{
+			width:310px;
+			margin-left:25px;
+		}
+		#botao{
+			float:right;
+			background-color:black;
+			padding:5px 15px;
+			font:bold 12px sans-serif;
+			border-radius:20px;
+			text-shadow:0px 1px white;
+			border:1px solid #fccfcf;
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+12,8f0222+13,8f0222+13 */
+background: #a90329; /* Old browsers */
+background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 12%, #8f0222 13%, #8f0222 13%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 12%,#8f0222 13%,#8f0222 13%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #a90329 0%,#8f0222 12%,#8f0222 13%,#8f0222 13%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#8f0222',GradientType=0 ); /* IE6-9 */
+			color:#000000;
+			box-shadow:0px 0px 10 px #fccfcf;
+		}
+		#botao:hover{/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8f0222+87,8f0222+87,8f0222+88,a90329+100 */
+background: #8f0222; /* Old browsers */
+background: -moz-linear-gradient(top,  #8f0222 87%, #8f0222 87%, #8f0222 88%, #a90329 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #8f0222 87%,#8f0222 87%,#8f0222 88%,#a90329 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #8f0222 87%,#8f0222 87%,#8f0222 88%,#a90329 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f0222', endColorstr='#a90329',GradientType=0 ); /* IE6-9 */
+			cursor:pointer;
+
+		}
+		#lembrar-senha{
+			font:12px sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="login-box">
+		<div id="login-box-interno">
+			<div id="login-box-label">LOGIN</div>
+			<div class="input-div" id="input-usuario">
+				<input type="text" value="Usuario ou E-mail">
+			</div>
+			<div class="input-div" id="senha">
+				<input type="text" value="Senha">
+			</div>
+			<div id="botoes">
+				<div id="botao">LOGIN</div>
+				<div id="lembrar-senha">
+					<input type="checkbox">
+					Lembrar minha Senha
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

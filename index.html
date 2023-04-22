@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style type="text/css">
+		body{
+			background-color:#11a6d4;
+		}
+		#Login-box{
+			background-color:#1992b7; 
+			width:380px;
+			height:260px;
+			margin:140px auto 0px;
+			border-radius:5px;
+		}
+		#Login-box-interno{
+			width:360px; 
+			height:240px;
+			background-color:#fdfdfd;
+			position:absolute;
+			margin:10px;
+			border-radius:5px; 
+			box-shadow:0px 0px 5px black;
+			overflow:hidden;
+		}
+		#Login-box-label{
+			height:45px;
+			text-align:center;
+			font:bold 14px/45px sans-serif; 
+			border-top-left-radius:5px;
+			border-top-right-radius:5px;
+				/ * Permalink - use para editar e compartilhar esse gradiente: https://colorzilla.com/gradient-editor/#207cca+99,207cca+99,207cca+99,207cca+99,207cca+99,207cca+99,207cca+99,1e5799+100,1e5799+ 100 * /
+fundo: # 207cca; / * Navegadores antigos * /
+fundo: -moz-linear-gradient (-45deg, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 1e5799 100%, # 1e5799 100 %); / * FF3.6-15 * /
+fundo: -webkit-linear-gradient (-45deg, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 1e5799 100%, # 1e5799 100 %); / * Chrome10-25, Safari5.1-6 * /
+fundo: gradiente linear (135deg, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 207cca 99%, # 1e5799 100%, # 1e5799 100%); / * W3C, IE10 +, FF16 +, Chrome26 +, Opera12 +, Safari7 + * /
+filter: progid: DXImageTransform.Microsoft.gradient (startColorstr = '# 207cca', endColorstr = '# 1e5799', GradientType = 1); / * IE6-9 fallback no gradiente horizontal * /
+			
+			border-bottom:1px solid width; 
+			box-shadow:1px 0px 3px black;
+			color:#555555;
+			text-shadow:1px 0px 1px width;
+		}
+		.input-div{
+			margin:20px;
+			padding:5px;
+			background-color:#f2f5f7;
+			border-radius:3px;
+		}
+		.input-div input{
+			width:310px;
+			height:35px;
+			padding-left:5px;
+			font: normal 13px sans-serif;
+			color:#aeaeae;
+			border-radius:3px;
+			border:1px solid #bfc4c6;
+			outline:none; 
+
+		}
+		.input-div:hover{
+			background-color:#e0f1fc;
+		}
+		.input-div:hover input{
+			border-color:#7dc6dd;
+		}
+		#input-senha{
+			margin-top:-10px;
+		}
+		#botoes{
+			width:310px; 
+			margin-left:25px;
+		}
+		#botao{
+			float:right;
+			background-color:red;
+			padding:5px 5px;
+			font:bold 12px sans-serif;
+			border-radius:20px;
+			text-shadow:0px 1px white;
+			border:1px solid #9eb9c3;
+			/ * Permalink - use para editar e compartilhar esse gradiente: https://colorzilla.com/gradient-editor/#1e5799+0,207cca+0,2989d8+1,2989d8+1,207cca+2,7db9e8+100 * /
+fundo: # 1e5799; / * Navegadores antigos * /
+fundo: -moz-linear-gradient (esquerda, # 1e5799 0%, # 207cca 0%, # 2989d8 1%, # 2989d8 1%, # 207cca 2%, # 7db9e8 100%); / * FF3.6-15 * /
+fundo: -webkit-linear-gradient (esquerda, # 1e5799 0%, # 207cca 0%, # 2989d8 1%, # 2989d8 1%, # 207cca 2%, # 7db9e8 100%); / * Chrome10-25, Safari5.1-6 * /
+fundo: gradiente linear (para a direita, # 1e5799 0%, # 207cca 0%, # 2989d8 1%, # 2989d8 1%, # 207cca 2%, # 7db9e8 100%); / * W3C, IE10 +, FF16 +, Chrome26 +, Opera12 +, Safari7 + * /
+filter: progid: DXImageTransform.Microsoft.gradient (startColorstr = '# 1e5799', endColorstr = '# 7db9e8', GradientType = 1); / * IE6-9 * /
+		background:/ * Permalink - use para editar e compartilhar esse gradiente: https://colorzilla.com/gradient-editor/#7db9e8+0,207cca+98,2989d8+99,2989d8+99,207cca+100,1e5799+100 * /
+fundo: # 7db9e8; / * Navegadores antigos * /
+fundo: -moz-linear-gradient (esquerda, # 7db9e8 0%, # 207cca 98%, # 2989d8 99%, # 2989d8 99%, # 207cca 100%, # 1e5799 100%); / * FF3.6-15 * /
+fundo: -webkit-linear-gradient (esquerda, # 7db9e8 0%, # 207cca 98%, # 2989d8 99%, # 2989d8 99%, # 207cca 100%, # 1e5799 100%); / * Chrome10-25, Safari5.1-6 * /
+fundo: gradiente linear (para a direita, # 7db9e8 0%, # 207cca 98%, # 2989d8 99%, # 2989d8 99%, # 207cca 100%, # 1e5799 100%); / * W3C, IE10 +, FF16 +, Chrome26 +, Opera12 +, Safari7 + * /
+filter: progid: DXImageTransform.Microsoft.gradient (startColorstr = '# 7db9e8', endColorstr = '# 1e5799', GradientType = 1); / * IE6-9 * /
+		}
+		#botao:hover{
+			/ * Permalink - use para editar e compartilhar esse gradiente: https://colorzilla.com/gradient-editor/#1e5799+0,207cca+0,2989d8+1,2989d8+1,207cca+2,7db9e8+100 * /
+fundo: # 1e5799; / * Navegadores antigos * /
+fundo: -moz-linear-gradient (esquerda, # 1e5799 0%, # 207cca 0%, # 2989d8 1%, # 2989d8 1%, # 207cca 2%, # 7db9e8 100%); / * FF3.6-15 * /
+fundo: -webkit-linear-gradient (esquerda, # 1e5799 0%, # 207cca 0%, # 2989d8 1%, # 2989d8 1%, # 207cca 2%, # 7db9e8 100%); / * Chrome10-25, Safari5.1-6 * /
+fundo: gradiente linear (para a direita, # 1e5799 0%, # 207cca 0%, # 2989d8 1%, # 2989d8 1%, # 207cca 2%, # 7db9e8 100%); / * W3C, IE10 +, FF16 +, Chrome26 +, Opera12 +, Safari7 + * /
+filter: progid: DXImageTransform.Microsoft.gradient (startColorstr = '# 1e5799', endColorstr = '# 7db9e8', GradientType = 1); / * IE6-9 * /
+			background:/ * Permalink - use para editar e compartilhar esse gradiente: https://colorzilla.com/gradient-editor/#7db9e8+0,207cca+98,2989d8+99,2989d8+99,207cca+100,1e5799+100 * /
+fundo: # 7db9e8; / * Navegadores antigos * /
+fundo: -moz-linear-gradient (esquerda, # 7db9e8 0%, # 207cca 98%, # 2989d8 99%, # 2989d8 99%, # 207cca 100%, # 1e5799 100%); / * FF3.6-15 * /
+fundo: -webkit-linear-gradient (esquerda, # 7db9e8 0%, # 207cca 98%, # 2989d8 99%, # 2989d8 99%, # 207cca 100%, # 1e5799 100%); / * Chrome10-25, Safari5.1-6 * /
+fundo: gradiente linear (para a direita, # 7db9e8 0%, # 207cca 98%, # 2989d8 99%, # 2989d8 99%, # 207cca 100%, # 1e5799 100%); / * W3C, IE10 +, FF16 +, Chrome26 +, Opera12 +, Safari7 + * /
+filter: progid: DXImageTransform.Microsoft.gradient (startColorstr = '# 7db9e8', endColorstr = '# 1e5799', GradientType = 1); / * IE6-9 * /;
+			cursor:pointer;
+		}
+		#lembrar-senha{
+			font:normal 12px sans-serif;
+		}
+	</style>
+</head>
+<body>	
+	<div id="Login-box">
+		<div id="Login-box-interno">
+			<div id="Login-box-label">LOGIN</div>
+			<div class="input-div" id="input-usuario">
+				<input type="text" value="Usuario ou E-mail"/>
+			</div>
+			<div class="input-div" id="senha">
+				<input type="text" value="Senha"/>
+			</div>
+			<div id="botoes">
+				<div id="botao"> LOGIN</div>
+				<div id="lembrar-senha">
+					<input type="checkbox"/>
+					 Lembrar minha senha
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
